@@ -1,0 +1,259 @@
+ .navbar {
+    
+    background-color: #383838;
+    width: 100%;
+    overflow: auto;
+    font-family: "Amatic SC", sans-serif;
+    font-size:35px;
+    padding-top:20px;
+}
+
+.navbar li:hover{
+    background-color:red;
+}
+
+
+
+ul { 
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  
+    
+}
+
+li {float:left;}
+
+li a {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    
+}
+
+
+.mainCont { 
+    
+    margin: auto;
+    width:100%;
+    text-align: center;
+}
+
+.pizza{
+    width:100%;
+}
+
+
+.foot {
+    min-height: 80px;
+    background-color: #383838;
+    width: 100%;
+    overflow: auto;
+    
+    
+}
+
+ 
+
+form.example input[type=text] {
+ 
+  font-size: 20px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+form.example button {
+  float: left;
+  width: 8%;
+  background: red;
+  color: white;
+  font-size: 20px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: pink;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+} 
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow:hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  
+  border: none;
+  outline: none;
+  font-size:35px;
+  background-color: inherit;
+  color:white;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+  font-size:35px;
+  color:black;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  
+  display: none;
+  position: relative;
+  font-size:35px;
+  color:black;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding:12px 16px;
+  font-size:35px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+  
+}
+
+/*css for index.html.erb*/
+
+.button {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    background-color: #d27979;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+}
+
+/*CSS for forms*/
+
+.newItemForm{
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    background-color: #d27979;
+    margin: auto;
+    width:80%;
+    border-radius:4px;
+    padding: 10px;
+    text-align: center;
+    font-size:20px;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+
+input[type=submit] {
+    width: 100%;
+    background-color: #383838;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #878f99;
+}
+
+
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #d27979 ;
+    color: white;
+}
+
+/*CSS for Categories*/
+.grid-container {
+  display: grid;
+  grid-template-columns: 15% 25% auto;
+  grid-gap: 5px;
+  background-color: #d27979;
+  padding: 5px;
+}
+
+.grid-container > div {
+  background-color: #FDF5E1;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+ 
+.category:hover{
+  background-color: #ddd;
+}
+
+
+ 
+
+
+ 
+
+
+ 

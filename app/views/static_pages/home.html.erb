@@ -1,0 +1,22 @@
+<%provide(:title,"Home")%>
+<div class="mainCont">
+<%= image_tag("pizza.jpeg", alt: "Welcome Logo", :class => "pizza") %>    
+</div> 
+<div class="w3-display-middle w3-center">
+     
+    <p class="w3-button w3-xxlarge w3-black" style="text-decoration:none"><%= link_to "LET ME SEE THE MENU", "/menu" %></p>
+</div>
+
+<div class="mainCont">
+    <h1>Categories</h1>
+    <% @categories.each do |category| %>
+    <div class="grid-container"> 
+      <div class="category"><%= category.title %></div>
+      <a href="/category/<%= category.title %>"><div class="category"><img src="/assets/<%= category.image %>"alt="<%= category.title %>"></div></a>
+      <div class="category"><%= category.description %></div>
+    </div>
+    <% end %>
+</div>
+
+ <%=render 'layouts/popular'%>
+

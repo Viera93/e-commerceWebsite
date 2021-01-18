@@ -1,0 +1,25 @@
+<div class="w3-row w3-center w3-border w3-border-dark-grey">
+  <div id="Pizza" class="w3-container menu w3-padding-32 w3-sand">
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @category.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @category.description %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @category.image %>
+</p>
+
+ 
+<%= link_to 'Back', categories_path, :class => "button", :role => "button" %>
+
+   </div>
+</div>   

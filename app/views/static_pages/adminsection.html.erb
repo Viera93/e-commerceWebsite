@@ -1,0 +1,67 @@
+<% if user_signed_in? && current_user.admin? %>
+<p id="notice"><%= notice %></p>
+<div class="w3-row w3-center w3-border w3-border-dark-grey">
+  <div id="Pizza" class="w3-container menu w3-padding-32 w3-sand">
+<h1>Bookings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Booking date</th>
+      <th>User</th>
+      <th>Status</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+   <tbody>
+    <% @bookings.each do |booking| %>
+      <tr>
+        <td><%= booking.booking_date %></td>
+        <td><%= booking.user.email %></td>
+        <td><%= booking.status %></td>
+        <td><%= link_to 'Show', booking, :class => "button", :role => "button" %></td>
+        <td><%= link_to 'Edit', edit_booking_path(booking), :class => "button", :role => "button" %></td>
+        <td><%= link_to 'Destroy', booking, method: :delete, data: { confirm: 'Are you sure?' }, :class => "button", :role => "button" %></td>
+      </tr>  
+  
+    <% end %>
+   </tbody>
+  </table>
+ </div>
+</div>
+
+
+<div class="w3-row w3-center w3-border w3-border-dark-grey">
+  <div id="Pizza" class="w3-container menu w3-padding-32 w3-sand">
+ <% @users.each do |user| %>
+   <h2>Id <%= user.id %></h2>
+   <h2>Id <%= user.email %></h2>
+   <h2>Role <%= user.admin %></h2>
+   <a href="/upgrade_admin/<%= user.id %>" class="button">Make <%= user.email %> Admin</a>
+   <a href="/downgrade_admin/<%= user.id %>" class="button">Remove <%= user.email %> Admin</a>
+ <% end %>
+ </div>
+ 
+</div>
+
+
+
+<% else %>
+<div class="w3-row w3-center w3-border w3-border-dark-grey">
+  <div id="Pizza" class="w3-container menu w3-padding-32 w3-red">
+    <h1>Sorry, this section is only for Admin!!!</h1>
+  </div>
+</div> 
+    
+<% end %>
+   
+
+
+ 
+
+ 
+
+
+ 
+   

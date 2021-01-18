@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= yield(:title) %> | Delivering Meal </title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  </head>
+
+  <body>
+    
+    <%= render '/layouts/header'%>
+    <%=render 'layouts/search'%>
+     
+    
+   
+  <%= yield %>
+
+
+  <footer class="foot">
+    <span class="w3-text-white w3-hide-small" style="font-size:30px;text-align:center;"><br>~~~ La Consegna ~~~</br>Authentic Italian Take away</</span>
+
+  </footer>
+  
+  </body>
+</html>

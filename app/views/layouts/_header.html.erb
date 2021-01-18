@@ -1,0 +1,36 @@
+ <header class="navbar">
+      
+      <ul>
+        <li><%= link_to "Home", "/" %></li>
+          <div class="dropdown">
+            <button class="dropbtn"><li><a href="#">My account</a></li>
+            </button>   
+              <div class="dropdown-content">
+                
+                <% if user_signed_in? %>
+                 <li><a href="#">Hi <%= current_user.email %></a></li>
+                 <li><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></li>
+                <% else %>
+                 <li><%= link_to 'Register', new_user_registration_path %></li> 
+                 <li><%= link_to 'Sign in', new_user_session_path %></li>
+                <% end %>
+                <% if user_signed_in? %> 
+                <a href="#"><%= link_to "My cart", "/cart" %></a>
+                <a href="#"><%= link_to "My bookings", "/my_bookings" %></a>
+                <% end %>
+	              
+              </div>
+          </div>
+        <li><%= link_to "Menu", "/menu" %></li>
+        <li><%= link_to "About", "/about" %></li>
+        <li><%= link_to "Contact", "/contact" %></li>
+        <% if user_signed_in? && current_user.admin? %>
+         <li><%= link_to "Admin", "/admin" %></li>
+        <% end %>
+        
+      </ul>
+	 
+  </header>
+  
+   
+
